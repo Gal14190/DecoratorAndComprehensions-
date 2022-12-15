@@ -26,7 +26,7 @@ def pep8(func):
         return str
 
     def foo(*args, **kwargs):
-        logging.info('prp8 function run')
+        logging.info('pep8 function run')
         newKwargs = {}
         for key in kwargs:
             newKey = key[0].lower() + key[1:]   # make sure that the first letter is lower
@@ -42,7 +42,7 @@ def pep8(func):
 
 @pep8
 def f(x, foo_bar, stam, yet_another_silly_name):
-    logging.info('f function (prp8) run')
+    logging.info('f function (pep8) run')
     logging.debug(f"x: {x}, foo_bar: {foo_bar}, stam: {stam}, yet_another_silly_name: {yet_another_silly_name}")
     logging.debug(f"x * 1000 + foo_bar * 100 + stam * 10 +  yet_another_silly_name  = {x * 1000 + foo_bar * 100 + stam * 10 +  yet_another_silly_name }")
     return x * 1000 + foo_bar * 100 + stam * 10 +  yet_another_silly_name 
@@ -54,6 +54,7 @@ Solusion for Question 2
 
 class Car:
     def __init__(self, description):
+        logging.info(f'make new Car {description}')
         self._description = description 
     
     def description(self):
@@ -81,6 +82,7 @@ class CarDecorator(Car):
     _Car: Car = None
 
     def __init__(self, car: Car):
+        logging.info(f'edit Car safety device: {car.description()}')
         self._Car = car
 
     def car(self):
@@ -163,6 +165,14 @@ class Q3(unittest.TestCase):
         self.assertEqual(self.composeStr(['n','h','t','y','p','o'] , [5,4,3,2,6,1])
                                         , "python")
 
+    def test_composeStr_empty(self):
+        self.assertEqual(self.composeStr([], [])
+                                        ,"")
+
+    def test_composeStr_single(self):
+        self.assertEqual(self.composeStr(['a'], [1])
+                                        ,"a")
+
     def composeStr(self, L1, L2):
         return "".join([L1[index - 1] for index in L2])
         
@@ -174,9 +184,21 @@ class Q4(unittest.TestCase):
     def test_2(self):
         self.assertEqual(self.composeLst([(3,1),(5,2),(1,3),(4,4)])
                                         , [-1000, 3, -1000, 1, 4, 2])
+    
+    def test_composeLst_empty(self):
+        self.assertEqual(self.composeLst([])
+                                        ,[])
+
+    def test_composeLst_single(self):
+        self.assertEqual(self.composeLst([(0, 1)])
+                                        ,[1])
+
+    def test_composeLst_multiple_same_index(self):
+        self.assertEqual(self.composeLst([(0, 1), (0, 2), (0, 3)])
+                                        ,[1])
 
     def composeLst(self, L):
-        return [([value for indexTuple, value in L if indexTuple == indexList] + [-1000])[0] for indexList in range(max([i for i, x in L])+1)]
+        return [([value for indexTuple, value in L if indexTuple == indexList] + [-1000])[0] for indexList in range(max([i for i, x in L], default=-1)+1)]
         '''
         for indexList in range of the max index in the tuple
             for indexTuple, value in L
