@@ -1,12 +1,159 @@
+# Afeka college 2022
+# Assignment 2
+##
+# Create at 15/12/2022
+# Authors:  Gal Ashkenazi   (315566752)
+#           Roy Vaygue      (318860848)
+##
+
 import unittest
+import logging
 
-class Q1:
-    def run():
-        pass
+logging.basicConfig(filename='Logger.log', encoding='utf-8', level=logging.DEBUG)
 
-class Q2:
-    def run():
-        pass
+'''
+Solusion for Question 1
+'''
+
+def pep8(func):
+    # find caps letters and push '_' before
+    def findAndLow(str):
+        for t in str:
+            for i, c in enumerate(str):
+                if c.isupper():
+                    str = str[:i] + '_' + c.lower() + str[i+1:]
+                    break
+        return str
+
+    def foo(*args, **kwargs):
+        logging.info('prp8 function run')
+        newKwargs = {}
+        for key in kwargs:
+            newKey = key[0].lower() + key[1:]   # make sure that the first letter is lower
+            newKey = findAndLow(newKey)
+
+            newKwargs[newKey] = kwargs[key]     # push the value into the new key
+
+        logging.debug(f"original keys: {kwargs}\nnew Keys:  {newKwargs}")
+            
+        return func(*args, **newKwargs)    # call the original function
+
+    return foo
+
+@pep8
+def f(x, foo_bar, stam, yet_another_silly_name):
+    logging.info('f function (prp8) run')
+    logging.debug(f"x: {x}, foo_bar: {foo_bar}, stam: {stam}, yet_another_silly_name: {yet_another_silly_name}")
+    logging.debug(f"x * 1000 + foo_bar * 100 + stam * 10 +  yet_another_silly_name  = {x * 1000 + foo_bar * 100 + stam * 10 +  yet_another_silly_name }")
+    return x * 1000 + foo_bar * 100 + stam * 10 +  yet_another_silly_name 
+
+
+'''
+Solusion for Question 2
+'''
+
+class Car:
+    def __init__(self, description):
+        self._description = description 
+    
+    def description(self):
+        return self._description
+    
+    def safety_rating(self):
+        return 0
+
+class SuperMini(Car):
+    def description(self): # override   
+        return super().description() + "(SuperMini)" 
+    
+    def safety_rating(self): # override
+        return 1
+ 
+class SUV(Car):
+    def description(self): # override   
+        return super().description() + "(SUV)"
+    
+    def safety_rating(self): #override
+        return 2
+
+
+class CarDecorator(Car):
+    _Car: Car = None
+
+    def __init__(self, car: Car):
+        self._Car = car
+
+    def car(self):
+        return self._Car
+
+    def description(self): # override   
+        return self._Car.description()
+    
+    def safety_rating(self): # override
+        return self._Car.safety_rating()
+
+class KeyLess(CarDecorator):
+    def description(self): # override   
+        return super().description() + " is keyless"
+
+    def safety_rating(self): # override
+        return self._Car.safety_rating() + 0
+
+class ABS(CarDecorator):
+    def description(self): # override   
+        return super().description() + " with ABS"
+    
+    def safety_rating(self): # override
+        return self._Car.safety_rating() + 2
+
+class AEB(CarDecorator):
+    def description(self): # override   
+        return super().description() + " with AEB"
+    
+    def safety_rating(self): # override
+        return self._Car.safety_rating() + 4
+
+'''
+Solusions & UnitTests
+'''
+
+class Q1(unittest.TestCase):
+    def test_1(self):
+        self.assertEqual(f(1, YetAnotherSillyName=2, stam=9, fooBar=4)
+                                        , 1492)
+    def test_2(self):
+        self.assertEqual(f(1, YetAnotherSillyName=3, Stam=9, fooBar=4)
+                                        , 1493)
+
+class Q2(unittest.TestCase):
+    def test_1(self):
+        car1 = SuperMini("Scoda Fabia")
+        car1 = KeyLess(car1)
+        car1 = AEB(car1)
+
+        self.assertEqual(car1.description()
+                        , "Scoda Fabia(SuperMini) is keyless with AEB")
+        self.assertEqual(car1.safety_rating()
+                        , 5)
+
+        # install ABS in the car
+        car1 = ABS(car1)
+        car1.description()
+
+        self.assertEqual(car1.description()
+                        , "Scoda Fabia(SuperMini) is keyless with AEB with ABS")
+        self.assertEqual(car1.safety_rating()
+                        , 7)
+        
+    def test_2(self):
+        car1 = SUV("Mercedes EQE")
+        car1 = KeyLess(car1)
+        car1 = ABS(car1)
+
+        self.assertEqual(car1.description()
+                        , "Mercedes EQE(SUV) is keyless with ABS")
+        self.assertEqual(car1.safety_rating()
+                        , 4)
 
 class Q3(unittest.TestCase):
     def test_1(self):
@@ -19,7 +166,6 @@ class Q3(unittest.TestCase):
     def composeStr(self, L1, L2):
         return "".join([L1[index - 1] for index in L2])
         
-
 class Q4(unittest.TestCase):
     def test_1(self):
         self.assertEqual(self.composeLst([(4,9),(0,2),(1,4),(3,2)])
@@ -31,11 +177,17 @@ class Q4(unittest.TestCase):
 
     def composeLst(self, L):
         return [([value for indexTuple, value in L if indexTuple == indexList] + [-1000])[0] for indexList in range(max([i for i, x in L])+1)]
+        '''
+        for indexList in range of the max index in the tuple
+            for indexTuple, value in L
+                if indexTuple == indexList
+                    list[indexList] = [value]
+        
+        push to every columns the value -1000. 
+            ex. [[2, -1000],[4, -1000],[-1000],[2, -1000],[9, -1000]]
+        return the first column in every sub list
+            ex. [2, 4, -1000, 2, 9]
+        '''
 
 if __name__ == "__main__":
-    
-    Q1.run()
-    Q2.run()
-    
-
     unittest.main()
