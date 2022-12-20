@@ -6,9 +6,11 @@
 #           Roy Vaygue      (318860848)
 ##
 
+## import moduls
 import unittest
 import logging
 
+## setup logger file
 logging.basicConfig(filename='Logger.log', encoding='utf-8', level=logging.DEBUG)
 
 '''
@@ -16,36 +18,46 @@ Solusion for Question 1
 '''
 
 def pep8(func):
+    # put '_' and lower letter
+    def changeLetter(char):
+        if not char.isupper():
+            return char
+
+        return f"_{char.lower()}"
+
     # find caps letters and push '_' before
     def convertToLowCase(str):
         str = str[0].lower() + str[1:]   # make sure that the first letter is lower
 
-        while not str.islower():
+        while not str.islower(): # continue until the string is lower case
             for i, c in enumerate(str):
                 if c.isupper():
-                    str = str[:i] + '_' + c.lower() + str[i + 1:]
+                    str = str[:i] + changeLetter(c) + str[1 + i:]
                     break
+
         return str
 
     def foo(*args, **kwargs):
         logging.info('pep8 function run')
-        newKwargs = {}
+
+        new_Kwargs = {}
         for key in kwargs:
-            newKey = convertToLowCase(key)
+            new_Key = convertToLowCase(key)
+            new_Kwargs[new_Key] = kwargs[key]     # push the value into the new key
 
-            newKwargs[newKey] = kwargs[key]     # push the value into the new key
-
-        logging.debug(f"original keys: {kwargs}\nnew Keys:  {newKwargs}")
+        logging.debug(f"original keys: {kwargs}\nnew Keys:  {new_Kwargs}")
             
-        return func(*args, **newKwargs)    # call the original function
+        return func(*args, **new_Kwargs)    # call the original function
 
     return foo
 
 @pep8
 def f(x, foo_bar, stam, yet_another_silly_name):
     logging.info('f function (pep8) run')
+
     logging.debug(f"x: {x}, foo_bar: {foo_bar}, stam: {stam}, yet_another_silly_name: {yet_another_silly_name}")
     logging.debug(f"x * 1000 + foo_bar * 100 + stam * 10 +  yet_another_silly_name  = {x * 1000 + foo_bar * 100 + stam * 10 +  yet_another_silly_name }")
+
     return x * 1000 + foo_bar * 100 + stam * 10 +  yet_another_silly_name 
 
 
@@ -56,6 +68,7 @@ Solusion for Question 2
 class Car:
     def __init__(self, description):
         logging.info(f'make new Car {description}')
+
         self._description = description 
     
     def description(self):
@@ -78,16 +91,14 @@ class SUV(Car):
     def safety_rating(self): #override
         return 2
 
-
+## car decorator class
 class CarDecorator(Car):
     _Car: Car = None
 
     def __init__(self, car: Car):
         logging.info(f'edit Car safety device: {car.description()}')
-        self._Car = car
 
-    def car(self):
-        return self._Car
+        self._Car = car
 
     def description(self): # override   
         return self._Car.description()
@@ -97,13 +108,17 @@ class CarDecorator(Car):
 
 class KeyLess(CarDecorator):
     def description(self): # override   
+        logging.info(super().description() + " is keyless")
+
         return super().description() + " is keyless"
 
     def safety_rating(self): # override
         return self._Car.safety_rating() + 0
 
 class ABS(CarDecorator):
-    def description(self): # override   
+    def description(self): # override 
+        logging.info(super().description() + " with ABS")
+
         return super().description() + " with ABS"
     
     def safety_rating(self): # override
@@ -111,6 +126,8 @@ class ABS(CarDecorator):
 
 class AEB(CarDecorator):
     def description(self): # override   
+        logging.info(super().description() + " with AEB")
+
         return super().description() + " with AEB"
     
     def safety_rating(self): # override

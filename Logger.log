@@ -4,172 +4,6 @@ new Keys:  {'yet_another_silly_name': 2, 'stam': 9, 'foo_bar': 4}
 INFO:root:f function (pep8) run
 DEBUG:root:x: 1, foo_bar: 4, stam: 9, yet_another_silly_name: 2
 DEBUG:root:x * 1000 + foo_bar * 100 + stam * 10 +  yet_another_silly_name  = 1492
-INFO:root:None
-INFO:root:pep8 function run
-DEBUG:root:original keys: {'YetAnotherSillyName': 3, 'Stam': 9, 'fooBar': 4}
-new Keys:  {'yet_another_silly_name': 3, 'stam': 9, 'foo_bar': 4}
-INFO:root:f function (pep8) run
-DEBUG:root:x: 1, foo_bar: 4, stam: 9, yet_another_silly_name: 3
-DEBUG:root:x * 1000 + foo_bar * 100 + stam * 10 +  yet_another_silly_name  = 1493
-INFO:root:make new Car Scoda Fabia
-INFO:root:edit Car safety device: Scoda Fabia(SuperMini)
-INFO:root:edit Car safety device: Scoda Fabia(SuperMini) is keyless
-INFO:root:edit Car safety device: Scoda Fabia(SuperMini) is keyless with AEB
-INFO:root:make new Car Mercedes EQE
-INFO:root:edit Car safety device: Mercedes EQE(SUV)
-INFO:root:edit Car safety device: Mercedes EQE(SUV) is keyless
-INFO:root:pep8 function run
-INFO:root:pep8 function run
-INFO:root:pep8 function run
-INFO:root:pep8 function run
-INFO:root:pep8 function run
-INFO:root:pep8 function run
-INFO:root:pep8 function run
-INFO:root:pep8 function run
-INFO:root:pep8 function run
-DEBUG:root:original keys: {'YetAnotherSillyName': 2, 'stam': 9, 'fooBar': 4}
-new Keys:  {'yet_another_silly_name': 2, 'stam': 9, 'foo_bar': 4}
-INFO:root:f function (pep8) run
-DEBUG:root:x: 1, foo_bar: 4, stam: 9, yet_another_silly_name: 2
-DEBUG:root:x * 1000 + foo_bar * 100 + stam * 10 +  yet_another_silly_name  = 1492
-INFO:root:pep8 function run
-DEBUG:root:original keys: {'YetAnotherSillyName': 3, 'Stam': 9, 'fooBar': 4}
-new Keys:  {'yet_another_silly_name': 3, 'stam': 9, 'foo_bar': 4}
-INFO:root:f function (pep8) run
-DEBUG:root:x: 1, foo_bar: 4, stam: 9, yet_another_silly_name: 3
-DEBUG:root:x * 1000 + foo_bar * 100 + stam * 10 +  yet_another_silly_name  = 1493
-INFO:root:make new Car Scoda Fabia
-INFO:root:edit Car safety device: Scoda Fabia(SuperMini)
-INFO:root:edit Car safety device: Scoda Fabia(SuperMini) is keyless
-INFO:root:edit Car safety device: Scoda Fabia(SuperMini) is keyless with AEB
-INFO:root:make new Car Mercedes EQE
-INFO:root:edit Car safety device: Mercedes EQE(SUV)
-INFO:root:edit Car safety device: Mercedes EQE(SUV) is keyless
-INFO:root:pep8 function run
-DEBUG:root:original keys: {'YetAnotherSillyName': 2, 'stam': 9, 'fooBar': 4}
-new Keys:  {'yet_another_silly_name': 2, 'stam': 9, 'foo_bar': 4}
-INFO:root:f function (pep8) run
-DEBUG:root:x: 1, foo_bar: 4, stam: 9, yet_another_silly_name: 2
-DEBUG:root:x * 1000 + foo_bar * 100 + stam * 10 +  yet_another_silly_name  = 1492
-INFO:root:pep8 function run
-DEBUG:root:original keys: {'YetAnotherSillyName': 3, 'Stam': 9, 'fooBar': 4}
-new Keys:  {'yet_another_silly_name': 3, 'stam': 9, 'foo_bar': 4}
-INFO:root:f function (pep8) run
-DEBUG:root:x: 1, foo_bar: 4, stam: 9, yet_another_silly_name: 3
-DEBUG:root:x * 1000 + foo_bar * 100 + stam * 10 +  yet_another_silly_name  = 1493
-INFO:root:make new Car Scoda Fabia
-INFO:root:edit Car safety device: Scoda Fabia(SuperMini)
-INFO:root:edit Car safety device: Scoda Fabia(SuperMini) is keyless
-INFO:root:edit Car safety device: Scoda Fabia(SuperMini) is keyless with AEB
-INFO:root:make new Car Mercedes EQE
-INFO:root:edit Car safety device: Mercedes EQE(SUV)
-INFO:root:edit Car safety device: Mercedes EQE(SUV) is keyless
-INFO:root:pep8 function run
-DEBUG:root:original keys: {'YetAnotherSillyName': 2, 'stam': 9, 'fooBar': 4}
-new Keys:  {'yet_another_silly_name': 2, 'stam': 9, 'foo_bar': 4}
-INFO:root:f function (pep8) run
-DEBUG:root:x: 1, foo_bar: 4, stam: 9, yet_another_silly_name: 2
-DEBUG:root:x * 1000 + foo_bar * 100 + stam * 10 +  yet_another_silly_name  = 1492
-INFO:root:pep8 function run
-DEBUG:root:original keys: {'YetAnotherSillyName': 3, 'Stam': 9, 'fooBar': 4}
-new Keys:  {'yet_another_silly_name': 3, 'stam': 9, 'foo_bar': 4}
-INFO:root:f function (pep8) run
-DEBUG:root:x: 1, foo_bar: 4, stam: 9, yet_another_silly_name: 3
-DEBUG:root:x * 1000 + foo_bar * 100 + stam * 10 +  yet_another_silly_name  = 1493
-INFO:root:make new Car Scoda Fabia
-INFO:root:edit Car safety device: Scoda Fabia(SuperMini)
-INFO:root:edit Car safety device: Scoda Fabia(SuperMini) is keyless
-INFO:root:edit Car safety device: Scoda Fabia(SuperMini) is keyless with AEB
-INFO:root:make new Car Mercedes EQE
-INFO:root:edit Car safety device: Mercedes EQE(SUV)
-INFO:root:edit Car safety device: Mercedes EQE(SUV) is keyless
-INFO:root:pep8 function run
-INFO:root:pep8 function run
-INFO:root:make new Car Scoda Fabia
-INFO:root:edit Car safety device: Scoda Fabia(SuperMini)
-INFO:root:edit Car safety device: Scoda Fabia(SuperMini) is keyless
-INFO:root:edit Car safety device: Scoda Fabia(SuperMini) is keyless with AEB
-INFO:root:make new Car Mercedes EQE
-INFO:root:edit Car safety device: Mercedes EQE(SUV)
-INFO:root:edit Car safety device: Mercedes EQE(SUV) is keyless
-INFO:root:pep8 function run
-DEBUG:root:original keys: {'YetAnotherSillyName': 2, 'stam': 9, 'fooBar': 4}
-new Keys:  {'yet_another_silly_name': 2, 'stam': 9, 'foo_bar': 4}
-INFO:root:f function (pep8) run
-DEBUG:root:x: 1, foo_bar: 4, stam: 9, yet_another_silly_name: 2
-DEBUG:root:x * 1000 + foo_bar * 100 + stam * 10 +  yet_another_silly_name  = 1492
-INFO:root:pep8 function run
-DEBUG:root:original keys: {'YetAnotherSillyName': 3, 'Stam': 9, 'fooBar': 4}
-new Keys:  {'yet_another_silly_name': 3, 'stam': 9, 'foo_bar': 4}
-INFO:root:f function (pep8) run
-DEBUG:root:x: 1, foo_bar: 4, stam: 9, yet_another_silly_name: 3
-DEBUG:root:x * 1000 + foo_bar * 100 + stam * 10 +  yet_another_silly_name  = 1493
-INFO:root:make new Car Scoda Fabia
-INFO:root:edit Car safety device: Scoda Fabia(SuperMini)
-INFO:root:edit Car safety device: Scoda Fabia(SuperMini) is keyless
-INFO:root:edit Car safety device: Scoda Fabia(SuperMini) is keyless with AEB
-INFO:root:make new Car Mercedes EQE
-INFO:root:edit Car safety device: Mercedes EQE(SUV)
-INFO:root:edit Car safety device: Mercedes EQE(SUV) is keyless
-INFO:root:pep8 function run
-DEBUG:root:original keys: {'YetAnotherSillyName': 2, 'stam': 9, 'fooBar': 4}
-new Keys:  {'yet_another_silly_name': 2, 'stam': 9, 'foo_bar': 4}
-INFO:root:f function (pep8) run
-DEBUG:root:x: 1, foo_bar: 4, stam: 9, yet_another_silly_name: 2
-DEBUG:root:x * 1000 + foo_bar * 100 + stam * 10 +  yet_another_silly_name  = 1492
-INFO:root:pep8 function run
-DEBUG:root:original keys: {'YetAnotherSillyName': 3, 'Stam': 9, 'fooBar': 4}
-new Keys:  {'yet_another_silly_name': 3, 'stam': 9, 'foo_bar': 4}
-INFO:root:f function (pep8) run
-DEBUG:root:x: 1, foo_bar: 4, stam: 9, yet_another_silly_name: 3
-DEBUG:root:x * 1000 + foo_bar * 100 + stam * 10 +  yet_another_silly_name  = 1493
-INFO:root:pep8 function run
-DEBUG:root:original keys: {'Stam': 9, 'FooBar': 4}
-new Keys:  {'stam': 9, 'foo_bar': 4}
-INFO:root:make new Car Scoda Fabia
-INFO:root:edit Car safety device: Scoda Fabia(SuperMini)
-INFO:root:edit Car safety device: Scoda Fabia(SuperMini) is keyless
-INFO:root:edit Car safety device: Scoda Fabia(SuperMini) is keyless with AEB
-INFO:root:make new Car Mercedes EQE
-INFO:root:edit Car safety device: Mercedes EQE(SUV)
-INFO:root:edit Car safety device: Mercedes EQE(SUV) is keyless
-INFO:root:pep8 function run
-DEBUG:root:original keys: {'YetAnotherSillyName': 2, 'stam': 9, 'fooBar': 4}
-new Keys:  {'yet_another_silly_name': 2, 'stam': 9, 'foo_bar': 4}
-INFO:root:f function (pep8) run
-DEBUG:root:x: 1, foo_bar: 4, stam: 9, yet_another_silly_name: 2
-DEBUG:root:x * 1000 + foo_bar * 100 + stam * 10 +  yet_another_silly_name  = 1492
-INFO:root:pep8 function run
-DEBUG:root:original keys: {'YetAnotherSillyName': 3, 'Stam': 9, 'fooBar': 4}
-new Keys:  {'yet_another_silly_name': 3, 'stam': 9, 'foo_bar': 4}
-INFO:root:f function (pep8) run
-DEBUG:root:x: 1, foo_bar: 4, stam: 9, yet_another_silly_name: 3
-DEBUG:root:x * 1000 + foo_bar * 100 + stam * 10 +  yet_another_silly_name  = 1493
-INFO:root:pep8 function run
-DEBUG:root:original keys: {'Stam': 9, 'yetAnotherSillyName': 3}
-new Keys:  {'stam': 9, 'yet_another_silly_name': 3}
-INFO:root:f function (pep8) run
-DEBUG:root:x: 1, foo_bar: 4, stam: 9, yet_another_silly_name: 3
-DEBUG:root:x * 1000 + foo_bar * 100 + stam * 10 +  yet_another_silly_name  = 1493
-INFO:root:pep8 function run
-DEBUG:root:original keys: {}
-new Keys:  {}
-INFO:root:f function (pep8) run
-DEBUG:root:x: 1, foo_bar: 4, stam: 9, yet_another_silly_name: 3
-DEBUG:root:x * 1000 + foo_bar * 100 + stam * 10 +  yet_another_silly_name  = 1493
-INFO:root:make new Car Scoda Fabia
-INFO:root:edit Car safety device: Scoda Fabia(SuperMini)
-INFO:root:edit Car safety device: Scoda Fabia(SuperMini) is keyless
-INFO:root:edit Car safety device: Scoda Fabia(SuperMini) is keyless with AEB
-INFO:root:make new Car Mercedes EQE
-INFO:root:edit Car safety device: Mercedes EQE(SUV)
-INFO:root:edit Car safety device: Mercedes EQE(SUV) is keyless
-INFO:root:pep8 function run
-DEBUG:root:original keys: {'YetAnotherSillyName': 2, 'stam': 9, 'fooBar': 4}
-new Keys:  {'yet_another_silly_name': 2, 'stam': 9, 'foo_bar': 4}
-INFO:root:f function (pep8) run
-DEBUG:root:x: 1, foo_bar: 4, stam: 9, yet_another_silly_name: 2
-DEBUG:root:x * 1000 + foo_bar * 100 + stam * 10 +  yet_another_silly_name  = 1492
 INFO:root:pep8 function run
 DEBUG:root:original keys: {'YetAnotherSillyName': 3, 'Stam': 9, 'fooBar': 4}
 new Keys:  {'yet_another_silly_name': 3, 'stam': 9, 'foo_bar': 4}
@@ -196,8 +30,33 @@ DEBUG:root:x: 1, foo_bar: 4, stam: 9, yet_another_silly_name: 3
 DEBUG:root:x * 1000 + foo_bar * 100 + stam * 10 +  yet_another_silly_name  = 1493
 INFO:root:make new Car Scoda Fabia
 INFO:root:edit Car safety device: Scoda Fabia(SuperMini)
+INFO:root:Scoda Fabia(SuperMini) is keyless
 INFO:root:edit Car safety device: Scoda Fabia(SuperMini) is keyless
+INFO:root:Scoda Fabia(SuperMini) is keyless
+INFO:root:Scoda Fabia(SuperMini) is keyless with AEB
+INFO:root:Scoda Fabia(SuperMini) is keyless
+INFO:root:Scoda Fabia(SuperMini) is keyless
+INFO:root:Scoda Fabia(SuperMini) is keyless with AEB
+INFO:root:Scoda Fabia(SuperMini) is keyless
 INFO:root:edit Car safety device: Scoda Fabia(SuperMini) is keyless with AEB
+INFO:root:Scoda Fabia(SuperMini) is keyless
+INFO:root:Scoda Fabia(SuperMini) is keyless with AEB
+INFO:root:Scoda Fabia(SuperMini) is keyless
+INFO:root:Scoda Fabia(SuperMini) is keyless with AEB with ABS
+INFO:root:Scoda Fabia(SuperMini) is keyless
+INFO:root:Scoda Fabia(SuperMini) is keyless with AEB
+INFO:root:Scoda Fabia(SuperMini) is keyless
+INFO:root:Scoda Fabia(SuperMini) is keyless
+INFO:root:Scoda Fabia(SuperMini) is keyless with AEB
+INFO:root:Scoda Fabia(SuperMini) is keyless
+INFO:root:Scoda Fabia(SuperMini) is keyless with AEB with ABS
+INFO:root:Scoda Fabia(SuperMini) is keyless
+INFO:root:Scoda Fabia(SuperMini) is keyless with AEB
+INFO:root:Scoda Fabia(SuperMini) is keyless
 INFO:root:make new Car Mercedes EQE
 INFO:root:edit Car safety device: Mercedes EQE(SUV)
+INFO:root:Mercedes EQE(SUV) is keyless
 INFO:root:edit Car safety device: Mercedes EQE(SUV) is keyless
+INFO:root:Mercedes EQE(SUV) is keyless
+INFO:root:Mercedes EQE(SUV) is keyless with ABS
+INFO:root:Mercedes EQE(SUV) is keyless
