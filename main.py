@@ -1,7 +1,7 @@
 # Afeka college 2022
 # Assignment 2
 ##
-# Create at 15/12/2022
+# Created at 15/12/2022
 # Authors:  Gal Ashkenazi   (315566752)
 #           Roy Vaygue      (318860848)
 ##
@@ -17,11 +17,13 @@ Solusion for Question 1
 
 def pep8(func):
     # find caps letters and push '_' before
-    def findAndLow(str):
-        for t in str:
+    def convertToLowCase(str):
+        str = str[0].lower() + str[1:]   # make sure that the first letter is lower
+
+        while not str.islower():
             for i, c in enumerate(str):
                 if c.isupper():
-                    str = str[:i] + '_' + c.lower() + str[i+1:]
+                    str = str[:i] + '_' + c.lower() + str[i + 1:]
                     break
         return str
 
@@ -29,8 +31,7 @@ def pep8(func):
         logging.info('pep8 function run')
         newKwargs = {}
         for key in kwargs:
-            newKey = key[0].lower() + key[1:]   # make sure that the first letter is lower
-            newKey = findAndLow(newKey)
+            newKey = convertToLowCase(key)
 
             newKwargs[newKey] = kwargs[key]     # push the value into the new key
 
@@ -122,10 +123,19 @@ Solusions & UnitTests
 class Q1(unittest.TestCase):
     def test_1(self):
         self.assertEqual(f(1, YetAnotherSillyName=2, stam=9, fooBar=4)
-                                        , 1492)
+                            , 1492)
     def test_2(self):
         self.assertEqual(f(1, YetAnotherSillyName=3, Stam=9, fooBar=4)
-                                        , 1493)
+                            , 1493)
+    def test_3(self):
+        self.assertEqual(f(1, 4, Stam=9, yetAnotherSillyName=3)
+                        , 1493)
+    def test_4(self):
+        self.assertEqual(f(1, 4, 9, 3)
+                        , 1493)
+    def test_5(self):
+        self.assertEqual(f(x=1, YetAnotherSillyName=3, Stam=9, fooBar=4)
+                            , 1493)
 
 class Q2(unittest.TestCase):
     def test_1(self):
